@@ -10,7 +10,7 @@ app.use(express.json());
 
 // MongoDB connection
 mongoose
-  .connect('mongodb://localhost:27017/hospitalDB')
+  .connect('mongodb://127.0.0.1:27017/hospitalDB')
   .then(() => console.log('Connected to MongoDB'))
   .catch((error) => console.error('Error connecting to MongoDB:', error));
 
@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 // Start the server
 const PORT = 5000;
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running at http://127.0.0.1:${PORT}`);
 });
  
 const Appointment = require('./models/appointment');
