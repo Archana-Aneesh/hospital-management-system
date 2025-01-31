@@ -10,9 +10,7 @@ app.use(express.json());
 
 // MongoDB connection
 mongoose
-  .connect('mongodb://127.0.0.1:27017/hospitalDB', {
-    useUnifiedTopology: true,
-  })
+  .connect('mongodb://127.0.0.1:27017/hospitalDB')
   .then(() => console.log('Connected to MongoDB'))
   .catch((error) => console.error('Error connecting to MongoDB:', error));
 
